@@ -50,7 +50,7 @@ function Populate_recur(index,el){
       db.none(dataSql,[el.name,el.category,el.tele,el.address,el.img_src,el.review[0],el.review.length>1?el.review[1]:"-1",
                       el.review.length>2?el.review[2]:"-1"]).then(() => {
           console.log('Data populated');
-          if(fileNum<9){
+          if(fileNum<1){
             fileNum+=1;
             restaurant = require(`./data${fileNum}.json`);
             console.log(`Data${fileNum} populated`);
