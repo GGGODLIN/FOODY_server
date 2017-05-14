@@ -10,6 +10,7 @@ function list(searchText = '') {
         FROM restaurant
         ${where}
         ORDER BY id DESC
+        LIMIT 15
     `;
     return db.any(sql, searchText);
 }
